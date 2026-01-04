@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maaf dari Egi 🤍</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Sacramento&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(135deg,#ffe4ef,#fff5f9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Poppins',sans-serif;
+}
+
+/* CARD */
+.card{
+    background: rgba(255,255,255,0.92);
+    border-radius:28px;
+    padding:28px 24px;
+    max-width:380px;
+    width:90%;
+    text-align:center;
+    box-shadow:0 20px 45px rgba(255,170,200,0.25);
+}
+
+/* HEADER PINK SOFT */
+.header{
+    margin-bottom:18px;
+}
+
+.badge{
+    display:inline-block;
+    font-size:11px;
+    padding:5px 14px;
+    border-radius:20px;
+    background:#ffd1e3;
+    color:#ff7fae;
+    letter-spacing:1px;
+    margin-bottom:8px;
+}
+
+.title{
+    font-family:'Sacramento',cursive;
+    font-size:46px;
+    color:#ff7fae;
+}
+
+.subtitle{
+    font-size:13px;
+    color:#ff9fbe;
+    margin-top:-6px;
+}
+
+.divider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:14px 0;
+}
+
+.divider::before,
+.divider::after{
+    content:'';
+    width:55px;
+    height:1px;
+    background:#ffe0ec;
+}
+
+.divider span{
+    margin:0 10px;
+    color:#ff9fbe;
+    font-size:14px;
+}
+
+/* TEXT */
+#text{
+    font-size:14.5px;
+    color:#666;
+    line-height:1.8;
+    min-height:165px;
+    white-space:pre-line;
+}
+
+.cursor{
+    display:inline-block;
+    width:2px;
+    height:16px;
+    background:#ff9fbe;
+    animation: blink 1s infinite;
+    margin-left:3px;
+}
+
+.heart{
+    margin-top:12px;
+    font-size:22px;
+    animation:pulse 1.6s infinite;
+}
+
+.signature{
+    margin-top:16px;
+    font-weight:500;
+    color:#ff7fae;
+}
+
+button{
+    margin-top:18px;
+    background:#ffd1e3;
+    border:none;
+    color:#ff5f9e;
+    padding:12px 24px;
+    border-radius:30px;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:0 8px 20px rgba(255,170,200,0.35);
+}
+
+/* ANIMASI */
+@keyframes blink{
+    0%,50%,100%{opacity:1;}
+    25%,75%{opacity:0;}
+}
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.15);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <div class="header">
+        <div class="badge">for you</div>
+        <div class="title">Wardah</div>
+        <div class="subtitle">a soft message from Egi</div>
+
+        <div class="divider">
+            <span>♡</span>
+        </div>
+    </div>
+
+    <div id="text"></div><span class="cursor"></span>
+
+    <div class="heart">💗</div>
+    <div class="signature">— Egi</div>
+
+    <button onclick="alert('Semoga hatimu lembut hari ini 🤍')">
+        Peluk Virtual
+    </button>
+</div>
+
+<script>
+const text = `Egi minta maaf ya…
+kalau selama ini ada kata yang nyakitin,
+atau sikap yang bikin wardah ngerasa sendiri.
+
+Nggak ada niat sama sekali buat nyakitin wardah,
+Egi cuma lagi belajar,
+pelan-pelan jadi versi yang lebih baik.
+
+Kalau hati wardah masih lelah,
+istirahat dulu nggak apa-apa 🤍
+lopyuuu buatt wardahhh darii egiiii🤍💐`;
+
+let i = 0;
+const speed = 45;
+
+function typeWriter(){
+    if(i < text.length){
+        document.getElementById("text").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+    }
+}
+typeWriter();
+</script>
+
+</body>
+</html>
